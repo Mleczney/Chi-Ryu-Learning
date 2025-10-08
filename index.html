@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kanji Sprint — moderní hra na učení</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <div class="logo">漢</div>
+        <div>
+          <h1>Kanji Sprint</h1>
+          <p class="lead">Jednoduchý web pro učení kanji.</p>
+        </div>
+      </div>
+      <div class="hud">
+        <div class="chip">Score: <span id="score">0</span></div>
+        <div class="chip">Streak: <span id="streak">0</span></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="kanji-stage">
+          <div class="kanji-box" id="kanji">漢</div>
+          <div class="info">Vyber správný význam pro tento kanji</div>
+
+          <div class="answers" id="answers"></div>
+
+          <div class="controls">
+            <button class="btn ghost" id="skip">Skip ⏭</button>
+            <button class="btn" id="next" style="display:none">Další ➜</button>
+          </div>
+
+          <div id="feedback" class="info" style="min-height:24px"></div>
+        </div>
+      </section>
+
+      <aside class="card sidebar">
+        <h3>Staty & nastavení</h3>
+        <div class="stats">
+          <div>Level: <strong id="level">1</strong></div>
+          <div>Progres k levelu: <div class="progress"><i id="prog"></i></div></div>
+          <div>Best score: <strong id="best">0</strong></div>
+          <div style="display:flex;gap:8px;margin-top:6px">
+            <button class="btn ghost" id="reset">Reset</button>
+            <button class="btn ghost" id="shuffle">Zamíchat</button>
+          </div>
+        </div>
+
+        <h3 style="margin-top:14px">Kanji v sadě</h3>
+        <div class="list" id="kanji-list"></div>
+
+        <footer>
+          Tip: Použij čísla 1–4 pro rychlé odpovědi. ✨
+        </footer>
+      </aside>
+    </main>
+  </div>
+<script src="main.js"></script>
+</body>
+</html>
