@@ -1,15 +1,25 @@
-    // Datová sada kanji — můžeš doplnit vlastní
+    // Datová sada kanji
     const KANJI_SET = [
       {char: '日', meaning: 'den / slunce', reading: 'にち / ひ'},
       {char: '月', meaning: 'měsíc / měsíc (moon/month)', reading: 'げつ / つき'},
       {char: '火', meaning: 'oheň', reading: 'か / ひ'},
       {char: '水', meaning: 'voda', reading: 'すい / みず'},
-      {char: '木', meaning: 'strom', reading: 'もく / き'},
+      {char: '木', meaning: 'strom / dřevo', reading: 'もく / き'},
       {char: '金', meaning: 'zlato / peníze', reading: 'きん / かね'},
       {char: '土', meaning: 'země / půda', reading: 'ど / つち'},
       {char: '人', meaning: 'člověk', reading: 'じん / ひと'},
       {char: '大', meaning: 'velký', reading: 'だい / おお(きい)'},
-      {char: '小', meaning: 'malý', reading: 'しょう / ちい(さい)'}
+      {char: '小', meaning: 'malý', reading: 'しょう / ちい(さい)'},
+      {char: '天', meaning: '', reading: ''},
+      {char: '山', meaning: 'hora', reading: 'さん / やま'},
+      {char: '川', meaning: 'řeka', reading: 'せん / かわ'},
+      {char: '花', meaning: 'květina', reading: 'か / はな'},
+      {char: '空', meaning: 'nebe', reading: 'くう / そら'},
+      {char: '雨', meaning: 'déšť', reading: 'う / あめ'},
+      {char: '子', meaning: 'dítě', reading: 'し / こ'},
+      {char: '女', meaning: 'žena', reading: 'じょ / おんな'},
+      {char: '男', meaning: 'muž', reading: 'だん / おとこ'},
+      {char: '学', meaning: 'studium', reading: 'がく / まな(ぶ)'},
     ];
 
     // state
