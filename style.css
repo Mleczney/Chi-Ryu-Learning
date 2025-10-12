@@ -49,10 +49,13 @@ main{display:grid;grid-template-columns:1fr 320px;gap:18px}
 .stats{display:flex;flex-direction:column;gap:8px}
 .progress{height:10px;background:rgba(255,255,255,0.04);border-radius:999px;overflow:hidden}
 .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#06b6d4);width:0%}
-.list{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.list{margin-top:12px;display:flex;flex-direction:column;gap:8px;overflow: auto; height: 500px;}
 .tag{padding:8px;border-radius:8px;background:rgba(255,255,255,0.02);font-size:14px;color:var(--muted)}
 
-
+/* Scrollbar */
+.scrollbar-style::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: rgba(255,255,255,0.02);border-radius: 10px;}
+.scrollbar-style::-webkit-scrollbar{width: 10px;background-color: #0b1220;}
+.scrollbar-style::-webkit-scrollbar-thumb{border-radius: 10px;background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.44, #5da79b),color-stop(0.86, #60478b));}
 footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
 
 
