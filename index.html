@@ -17,12 +17,25 @@
         </div>
       </div>
       <div class="hud">
+        <div class="chip user-chip" id="user-chip">
+          <span id="user-avatar">👤</span>
+          <span id="username">Uživatel</span>
+        </div>
         <div class="chip">Score: <span id="score">0</span></div>
         <div class="chip">Streak: <span id="streak">0</span></div>
       </div>
     </header>
 
-    <main>
+    <!-- Navigation -->
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-page="game">🎮 Hra</button>
+      <button class="nav-tab" data-page="flashcards">📇 Kartičky</button>
+      <button class="nav-tab" data-page="writing">✍️ Psaní</button>
+      <button class="nav-tab" data-page="profile">👤 Profil</button>
+    </nav>
+
+    <!-- Game Page -->
+    <main id="page-game" class="page active">
       <section class="card">
         <div class="kanji-stage">
           <div class="kanji-box" id="kanji">漢</div>
@@ -58,6 +71,110 @@
           Tip: Použij čísla 1–4 pro rychlé odpovědi. ✨
         </footer>
       </aside>
+    </main>
+
+    <!-- Flashcards Page -->
+    <main id="page-flashcards" class="page">
+      <section class="card flashcard-container">
+        <h2>📇 Režim kartiček</h2>
+        <p class="info">Procházej kartičky svým tempem bez stresu</p>
+        <div class="kanji-stage">
+          <div class="flashcard" id="flashcard">
+            <div class="flashcard-front">
+              <div class="kanji-box" id="fc-kanji">漢</div>
+            </div>
+            <div class="flashcard-back" style="display:none">
+              <div class="fc-meaning" id="fc-meaning">meaning</div>
+              <div class="fc-reading" id="fc-reading">reading</div>
+            </div>
+          </div>
+          <div class="controls">
+            <button class="btn ghost" id="fc-prev">⏮ Předchozí</button>
+            <button class="btn" id="fc-flip">Otočit</button>
+            <button class="btn ghost" id="fc-next">Další ⏭</button>
+          </div>
+          <div class="info">Kartička <span id="fc-counter">1</span> z <span id="fc-total">20</span></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Writing Practice Page -->
+    <main id="page-writing" class="page">
+      <section class="card">
+        <h2>✍️ Nácvik psaní</h2>
+        <p class="info">Napiš čtení (hiragana) pro zobrazený kanji</p>
+        <div class="kanji-stage">
+          <div class="kanji-box" id="wr-kanji">漢</div>
+          <div class="info" id="wr-meaning">meaning</div>
+          
+          <input type="text" id="wr-input" class="writing-input" placeholder="Napiš čtení...">
+          
+          <div class="controls">
+            <button class="btn ghost" id="wr-skip">Skip ⏭</button>
+            <button class="btn" id="wr-check">Zkontrolovat</button>
+          </div>
+
+          <div id="wr-feedback" class="info" style="min-height:24px"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Profile Page -->
+    <main id="page-profile" class="page">
+      <div class="profile-container">
+        <section class="card profile-header">
+          <div class="profile-avatar-large" id="profile-avatar-display">👤</div>
+          <input type="text" id="username-input" class="username-edit" placeholder="Tvoje jméno">
+          <button class="btn" id="save-username">Uložit jméno</button>
+          
+          <h3 style="margin-top:20px">Vyber Avatar</h3>
+          <div class="avatar-selector" id="avatar-selector">
+            <div class="avatar-option" data-avatar="👤">👤</div>
+            <div class="avatar-option" data-avatar="🐉">🐉</div>
+            <div class="avatar-option" data-avatar="🎌">🎌</div>
+            <div class="avatar-option" data-avatar="⚡">⚡</div>
+            <div class="avatar-option" data-avatar="🌸">🌸</div>
+            <div class="avatar-option" data-avatar="🗻">🗻</div>
+            <div class="avatar-option" data-avatar="🎯">🎯</div>
+            <div class="avatar-option" data-avatar="🔥">🔥</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>📊 Statistiky</h2>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-value" id="profile-level">1</div>
+              <div class="stat-label">Level</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="profile-xp">0</div>
+              <div class="stat-label">Celkové XP</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="profile-best">0</div>
+              <div class="stat-label">Nejlepší score</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="profile-accuracy">0%</div>
+              <div class="stat-label">Přesnost</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="profile-total">0</div>
+              <div class="stat-label">Celkem otázek</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="profile-maxstreak">0</div>
+              <div class="stat-label">Max streak</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>🏆 Achievementy</h2>
+          <div class="achievements-grid" id="achievements-list"></div>
+        </section>
+      </div>
     </main>
   </div>
 <script src="main.js"></script>
